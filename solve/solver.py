@@ -2,9 +2,6 @@
 import math
 from numpy import reshape, array
 
-# board for demonstrative purposes
-from demoBoard import board
-
 
 def solve_board(board=None):
     """Recursively solves a sodoku board
@@ -81,13 +78,13 @@ def print_boards(input_board: list, solved_board: list):
         (lambda row: [e if type(e) == int else "." for e in row])(row)
         for row in input_board
     ]
-    print("\n          I N P U T                      S O L V E D      \n")
-    print("+---------------------------+   +---------------------------+")
+    print("\n             I N P U T                      S O L V E D      \n")
+    print("   +---------------------------+   +---------------------------+")
     for i in range(3):
-        print("| +-----------------------+ |   | +-----------------------+ | ")
+        print("   | +-----------------------+ |   | +-----------------------+ | ")
         for j in range(3):
             print(
-                "| |",
+                "   | |",
                 *input_board[i * 3 + j][:3],
                 "|",
                 *input_board[i * 3 + j][3:6],
@@ -103,14 +100,6 @@ def print_boards(input_board: list, solved_board: list):
                 *solved_board[i * 3 + j][6:],
                 "| |"
             )
-    print("| +-----------------------+ |   | +-----------------------+ | ")
-    print("+---------------------------+   +---------------------------+")
+    print("   | +-----------------------+ |   | +-----------------------+ | ")
+    print("   +---------------------------+   +---------------------------+")
 
-
-def main():
-    solved = solve_board(board)
-    print_boards(array(board).reshape(9, 9), array(solved).reshape(9, 9))
-
-
-if __name__ == "__main__":
-    main()

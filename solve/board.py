@@ -13,3 +13,4 @@ board = [
   None, 9,    None, None, None, None, 4,    None, None,
     # fmt: on
 ]
+
