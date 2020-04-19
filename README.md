@@ -12,7 +12,7 @@ Test it with the demo board as input
 
 ```console
 $ cd python-sodoku-solver/
-$ python3 solve
+$ python3 main.py
 
              I N P U T                          S O L V E D
 
@@ -33,31 +33,3 @@ $ python3 solve
    +-----------------------------+    +-----------------------------+
 ```
 
-Or, provide your own input
-
-```console
-$ vim solve/board.py
-```
-
-Provide sodoku board structured as a list with ```None``` for empty cells
-```python
-#!/usr/bin python3
-
-board = [
-  1,    None, None, None, 9,    None, None, None, None,
-  None, None, None, None, None, None, None, None, None,
-  None, 3,    None, None, None, None, None, None, None,
-  None, None, None, None, None, None, None, None, None,
-  None, None, None, None, None, None, None, None, None,
-  None, None, None, None, None, None, None, None, None,
-  None, None, None, None, None, None, None, None, None,
-  None, None, None, None, None, 4,    None, None, None,
-  None, None, None, None, None, None, None, None, None,
-] 
-```
-
-And do it again?
-
-```console
-$ python3 solve
-```
