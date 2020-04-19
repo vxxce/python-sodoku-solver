@@ -1,7 +1,8 @@
 #!usr/bin python3
 from solver import *
 from board import *
-import reshape, array from numpy
+from numpy import reshape, array
+
 
 def print_boards(input_board: list, solved_board: list):
     """Prints the input board and solved board
@@ -47,5 +48,6 @@ def main():
     solved = solve_board(board)
     print_boards(board, solved)
 
+    
 if __name__ == "__main__":
     main()
