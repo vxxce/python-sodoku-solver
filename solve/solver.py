@@ -2,20 +2,18 @@
 import math
 from numpy import reshape, array
 
-
 def solve_board(board=None):
     """Recursively solves a sodoku board
-
     Parameters
     --------------------------------------------------------------------------------
     board: list
-        A two-dimensional list representing a sodoku board where each inner list is
-        a row of cells.
+        A list representing the cells of a sodoku board read from left-to-right and
+        top-to-bottom with empty cells are denoted with None values.
     --------------------------------------------------------------------------------
     Returns
     --------------------------------------------------------------------------------
     list
-        A solved board
+        A solved board, or None if no valid solution.
     --------------------------------------------------------------------------------
     """
 
@@ -40,12 +38,10 @@ def solve_board(board=None):
 
 def get_neighbors(i):
     """Gets a cell's neighbors
-
     Parameters
     ----------------------------------------------------------------------------
     i: int
-        A cell's position in a zero-indexed, one dimensional list representing a
-        sodoku board read left-to-right, top-to-bottom.
+        The cell's index
     ----------------------------------------------------------------------------
     Returns
     ----------------------------------------------------------------------------
