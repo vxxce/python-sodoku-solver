@@ -1,6 +1,5 @@
 #!usr/bin python3
 import math
-from numpy import reshape, array
 
 def solve_board(board=None):
     """Recursively solves a sodoku board
